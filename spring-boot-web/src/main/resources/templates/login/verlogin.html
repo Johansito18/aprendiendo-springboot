@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns ="http://www.thymeleif.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${titulo}"></title>
+    <style>
+      div.logueito{
+        margin-left: auto;
+        margin-right: auto;
+        width: 50em;
+        border: 5px solid rgb(95, 12, 12);
+        padding: 10px;
+        border-radius: 100px;
+        background-color: rgba(0, 0, 0, 0.192);
+        text-align: center;
+      }
+      #boton{
+        color: white;
+        width: 10em;
+        background-color: black;
+        padding: 20px;
+        border-radius: 100px;
+      }
+      input.inputs{
+        margin: 10px;
+        width: 50em;
+        border: 2px solid black;
+        padding: 10px;
+        border-radius: 100px;
+      }
+      div.info{
+        color: white;
+        background-color: rgb(95, 12, 12);
+        width: 46%;
+        padding: 10px;
+        border-radius: 20px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      img.eren{ 
+        width: 20em;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+        border-radius: 500em;
+      }
+      img.tribal{
+        width: 10em;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px; 
+      }
+    </style>
+    <!--**No funcionaba el css en otro archivo**-->
+</head>
+<body>
+    <div class="info">
+      <h1 th:text="${resultado}"></h1>
+      <h1 th:text="${resultado2}"></h1>  
+    </div><br>
+    <div class="logueito">
+        <form>
+          <img class="tribal" th:src="@{/image/tribal.png}">
+          <img  class="eren" th:src="@{/image/eren.jpg}">
+          <img class="tribal" th:src="@{/image/tribal.png}"><br>
+          <h1 th:text="${titulo}"></h1>
+          <label for="usuario"> Usuario</label>
+          <br><input class="inputs" type="text" id="usuario" size="auto" name="usuario" placeholder="User" ><br>
+
+          <br><label for="pass">Contraseña</label>
+          <br><input class="inputs" type="password" id="pass" size="auto" name="password" placeholder="Password">
+
+          <br><br>
+          <a href="#">
+              <button id="boton" type="submit"> Login </button>
+          </a>
+        </form>
+    </div>
+    
+    
+</body>
+</html>
+
+
+

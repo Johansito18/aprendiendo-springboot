@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="https://www.thymeleaf.org"> <!--agregar name space para poder usar el thymeleaf (etiquetas html)-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text ="${titulo}">Hola Spring Boot</title>
+</head>
+<body>
+    <h1 th:text="${titulo}"></h1>
+
+    <table th:if="${!usuarios.isEmpty}">
+        <thead>
+            <tr>Nombre </tr>
+            <tr>Apellido </tr>
+            <tr>Email </tr>
+        </thead>
+        <tbody>
+            <tr th:each="usuario:${usuarios}">
+                <td th:text="${usuario.Nombre}"></td>
+                <td th:text="${usuario.Apellido}"></td>
+                <td th:text="${usuario.Email}"></td>  
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
